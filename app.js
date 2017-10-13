@@ -32,7 +32,7 @@ var bot = new builder.UniversalBot(connector, [
 
 bot.dialog("mainMenu", [
 	function(session){
-		builder.Prompts.choice(session, 'Main Menu', menuItems);
+		builder.Prompts.choice(session, 'Main Menu', menuItems, { listStyle: 3 });
 	},
 	function(session, results){
 		if (results.response){
